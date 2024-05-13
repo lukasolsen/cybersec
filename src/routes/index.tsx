@@ -10,7 +10,7 @@ const Index: React.FC = () => {
           <h1 className="text-8xl font-bold text-center w-full tracking-wide">
             Cyber Security Services
           </h1>
-          <p className="dark:text-gray-400 text-lg w-8/12">
+          <p className="dark:text-gray-400 text-lg w-8/12 text-center">
             Cyber Security Services er et amerikansk basert
             cybersikkerhetsselskap som leverer tjenester og håndterer
             cyberrisiko på vegne av våre verdifulle distribusjons- og
