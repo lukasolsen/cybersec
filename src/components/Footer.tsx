@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import { SosialCard } from "./SosialCard";
 
 type Fields = {
   title: string;
@@ -65,8 +66,13 @@ export const Footer: React.FC = () => {
     },
   ];
 
+  const sosials = [
+    { link: "https://google.com", img: "/google_play.jpg" },
+    { link: "https://apple.com", img: "/app_store.png" },
+  ];
+
   return (
-    <div className="p-16 w-full">
+    <div className="p-4 px-28 w-full">
       <div className="grid grid-cols-5 w-full gap-8">
         <div className="flex flex-col gap-2 items-start justify-center">
           <img
@@ -105,6 +111,12 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         ))}
+
+        <div className="flex flex-col gap-2 justify-center items-center">
+          {sosials.map((sosial) => (
+            <SosialCard image={sosial.img} link={sosial.link} />
+          ))}
+        </div>
       </div>
     </div>
   );
