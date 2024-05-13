@@ -4,13 +4,13 @@ type CardProps = {
   title: string;
   icon: React.ReactNode;
 
-  descripton: string;
+  description: string;
 
   link: string;
 };
 
 export const Card: React.FC<CardProps> = ({
-  descripton,
+  description,
   icon,
   link,
   title,
@@ -23,7 +23,7 @@ export const Card: React.FC<CardProps> = ({
 
       <h1 className="text-2xl font-bold">{title}</h1>
 
-      <p className="text-gray-400">{descripton}</p>
+      <p className="text-gray-400">{description}</p>
 
       <a
         className="w-full text-teal-400 flex flex-row items-center justify-between"
