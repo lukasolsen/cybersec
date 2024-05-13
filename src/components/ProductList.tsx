@@ -30,16 +30,43 @@ export const ProductList: React.FC = () => {
         "Vårt penetrasjonstestingteam kan identifisere sårbarheter innen cybersikkerhet før en inntrenger har muligheten til å infiltrere nettverket eller datasystemet ditt. Vi avdekker svakheter i nettverket ditt eller innen applikasjoner.",
       icon: <FaCloudDownloadAlt className="text-teal-300" />,
     },
+    {
+      title: "Cyber Security",
+      description:
+        "Vårt penetrasjonstestingteam kan identifisere sårbarheter innen cybersikkerhet før en inntrenger har muligheten til å infiltrere nettverket eller datasystemet ditt. Vi avdekker svakheter i nettverket ditt eller innen applikasjoner.",
+      icon: <FaCloudDownloadAlt className="text-teal-300" />,
+    },
+    {
+      title: "Cyber Security",
+      description:
+        "Vårt penetrasjonstestingteam kan identifisere sårbarheter innen cybersikkerhet før en inntrenger har muligheten til å infiltrere nettverket eller datasystemet ditt. Vi avdekker svakheter i nettverket ditt eller innen applikasjoner.",
+      icon: <FaCloudDownloadAlt className="text-teal-300" />,
+    },
+    {
+      title: "Cyber Security",
+      description:
+        "Vårt penetrasjonstestingteam kan identifisere sårbarheter innen cybersikkerhet før en inntrenger har muligheten til å infiltrere nettverket eller datasystemet ditt. Vi avdekker svakheter i nettverket ditt eller innen applikasjoner.",
+      icon: <FaCloudDownloadAlt className="text-teal-300" />,
+    },
+    {
+      title: "Cyber Security",
+      description:
+        "Vårt penetrasjonstestingteam kan identifisere sårbarheter innen cybersikkerhet før en inntrenger har muligheten til å infiltrere nettverket eller datasystemet ditt. Vi avdekker svakheter i nettverket ditt eller innen applikasjoner.",
+      icon: <FaCloudDownloadAlt className="text-teal-300" />,
+    },
   ];
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-      {products.map((product) => (
+      {products.map((product, index) => (
         <ProductCard
           key={product.title}
           title={product.title}
           description={product.description}
           icon={product.icon}
+          active={hoveredIndex === index}
+          onMouseEnter={() => setHoveredIndex(index)}
+          onMouseLeave={() => setHoveredIndex(null)}
         />
       ))}
     </div>
