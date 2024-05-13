@@ -1,8 +1,37 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Card } from "../components/Card";
 import { FaCloudDownloadAlt } from "react-icons/fa";
+import { Timeline } from "../components/Timeline";
+import { useMemo } from "react";
 
 const Index: React.FC = () => {
+  const [timelineItems] = useMemo(() => {
+    const people = [
+      {
+        name: "John Doe",
+        role: "CEO",
+        joined: "2020",
+        description:
+          "John Doe is the CEO of Cyber Security Services. He has been in the industry for over 10 years and has a lot of experience in the field of cyber security.",
+      },
+      {
+        name: "Jane Doe",
+        role: "CTO",
+        joined: "2021",
+        description:
+          "Jane Doe is the CTO of Cyber Security Services. She has been in the industry for over 5 years and has a lot of experience in the field of cyber security.",
+      },
+    ];
+
+    const items = people.map((person) => ({
+      slogan: "The beginning",
+      title: person.name,
+      date: person.joined,
+      description: person.description,
+    }));
+    return [items];
+  }, []);
+
   return (
     <div>
       <section className="p-20" id="home">
@@ -50,6 +79,46 @@ const Index: React.FC = () => {
             icon={<FaCloudDownloadAlt className="text-teal-300" />}
           />
         </div>
+      </section>
+
+      <section className="p-20" id="products">
+        <h1 className="text-6xl font-bold text-center w-full tracking-wide">
+          Våre produkter
+        </h1>
+        <div className="grid grid-cols-4 gap-8">
+          <Card
+            title="Administrert Deteksjon og Respons"
+            descripton="Vi tar den beste programvaren for bruddforebygging, CrowdStrike, og kobler den med 100% amerikanske tjenester for trusseljakt og respons 24x7x365..."
+            link="/cyber-security"
+            icon={<FaCloudDownloadAlt className="text-teal-300" />}
+          />
+          <Card
+            title="Virtual CISO"
+            descripton="Vi kan fungere som din virtuelle sjef for informasjonssikkerhet (vCiso) og bringe spesialisert cybersikkerhetskompetanse til organisasjonen din. Vi designer et moden cybersikkerhetsprogram og reduserer risikoen betydelig."
+            link="/cyber-security"
+            icon={<FaCloudDownloadAlt className="text-teal-300" />}
+          />
+          <Card
+            title="Penetrasjonstesting"
+            descripton="Vårt penetrasjonstestingteam kan identifisere sårbarheter innen cybersikkerhet før en inntrenger har muligheten til å infiltrere nettverket eller datasystemet ditt. Vi avdekker svakheter i nettverket ditt eller innen applikasjoner."
+            link="/cyber-security"
+            icon={<FaCloudDownloadAlt className="text-teal-300" />}
+          />
+          <Card
+            title="Cyber Security"
+            descripton="Vårt penetrasjonstestingteam kan identifisere sårbarheter innen cybersikkerhet før en inntrenger har muligheten til å infiltrere nettverket eller datasystemet ditt. Vi avdekker svakheter i nettverket ditt eller innen applikasjoner."
+            link="/cyber-security"
+            icon={<FaCloudDownloadAlt className="text-teal-300" />}
+          />
+        </div>
+      </section>
+
+      <section className="p-20" id="staff">
+        <h1 className="text-6xl font-bold text-center w-full tracking-wide">
+          Våre ansatte
+        </h1>
+
+        <Timeline items={timelineItems} />
       </section>
     </div>
   );
