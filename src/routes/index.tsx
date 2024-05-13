@@ -11,13 +11,14 @@ const Index: React.FC = () => {
             Cyber Security Services
           </h1>
           <p className="dark:text-gray-400 text-lg w-8/12">
-            Cyber Security Services is a U.S. based cybersecurity company
-            delivering services and managing cyber risk on behalf of our valued
-            distribution and technology partners.
+            Cyber Security Services er et amerikansk basert
+            cybersikkerhetsselskap som leverer tjenester og håndterer
+            cyberrisiko på vegne av våre verdifulle distribusjons- og
+            teknologipartnere.
           </p>
 
           <button className="bg-gradient-to-b from-teal-600 to-teal-700 text-white rounded-lg py-3 px-4 mt-4 font-semibold">
-            Get Started Now
+            Start nå!
           </button>
         </div>
       </section>
@@ -25,28 +26,28 @@ const Index: React.FC = () => {
       <section className="p-20" id="brief">
         <div className="grid grid-cols-4 gap-8">
           <Card
-            title="Managed Detection and Response"
-            descripton="We take the #1 breach prevention software, CrowdStrike, and couple it with 100% U.S. threat hunting and response services 24x7x365..."
+            title="Administrert Deteksjon og Respons"
+            descripton="Vi tar den beste programvaren for bruddforebygging, CrowdStrike, og kobler den med 100% amerikanske tjenester for trusseljakt og respons 24x7x365..."
             link="/cyber-security"
-            icon={<FaCloudDownloadAlt />}
+            icon={<FaCloudDownloadAlt className="text-teal-300" />}
           />
           <Card
-            title="Managed Detection and Response"
-            descripton="We take the #1 breach prevention software, CrowdStrike, and couple it with 100% U.S. threat hunting and response services 24x7x365..."
+            title="Virtual CISO"
+            descripton="Vi kan fungere som din virtuelle sjef for informasjonssikkerhet (vCiso) og bringe spesialisert cybersikkerhetskompetanse til organisasjonen din. Vi designer et moden cybersikkerhetsprogram og reduserer risikoen betydelig."
             link="/cyber-security"
-            icon={<FaCloudDownloadAlt />}
+            icon={<FaCloudDownloadAlt className="text-teal-300" />}
           />
           <Card
-            title="Managed Detection and Response"
-            descripton="We take the #1 breach prevention software, CrowdStrike, and couple it with 100% U.S. threat hunting and response services 24x7x365..."
+            title="Penetrasjonstesting"
+            descripton="Vårt penetrasjonstestingteam kan identifisere sårbarheter innen cybersikkerhet før en inntrenger har muligheten til å infiltrere nettverket eller datasystemet ditt. Vi avdekker svakheter i nettverket ditt eller innen applikasjoner."
             link="/cyber-security"
-            icon={<FaCloudDownloadAlt />}
+            icon={<FaCloudDownloadAlt className="text-teal-300" />}
           />
           <Card
-            title="Managed Detection and Response"
-            descripton="We take the #1 breach prevention software, CrowdStrike, and couple it with 100% U.S. threat hunting and response services 24x7x365..."
+            title="Cyber Security"
+            descripton="Vårt penetrasjonstestingteam kan identifisere sårbarheter innen cybersikkerhet før en inntrenger har muligheten til å infiltrere nettverket eller datasystemet ditt. Vi avdekker svakheter i nettverket ditt eller innen applikasjoner."
             link="/cyber-security"
-            icon={<FaCloudDownloadAlt />}
+            icon={<FaCloudDownloadAlt className="text-teal-300" />}
           />
         </div>
       </section>

@@ -81,8 +81,8 @@ export const Footer: React.FC = () => {
             className="max-h-36 max-w-36 object-cover inline"
           />
           <p className="text-gray-500 dark:text-gray-400 text-center">
-            A leading provider of cybersecurity services and solutions for
-            distribution and technology partners around the United States.
+            En ledende leverandør av cybersikkerhetstjenester og -løsninger for
+            distribusjon og teknologipartnere rundt om i USA.
           </p>
         </div>
         {Fields.map((field) => (
