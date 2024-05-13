@@ -2,6 +2,7 @@ import { Outlet } from "@tanstack/react-router";
 import { createRootRoute } from "@tanstack/react-router";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { Copyright } from "../components/Copyright";
 
 export const RootPage: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ export const RootPage: React.FC = () => {
         <Outlet />
       </div>
       <Footer />
+      <Copyright />
     </div>
   );
 };
