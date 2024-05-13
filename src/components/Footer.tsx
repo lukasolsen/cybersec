@@ -14,35 +14,35 @@ type Fields = {
 export const Footer: React.FC = () => {
   const Fields: Fields[] = [
     {
-      title: "About Us",
+      title: "Om Oss",
       links: [
         {
-          title: "About Us",
+          title: "Om oss",
           link: "/aboutus",
         },
         {
-          title: "Contact",
+          title: "Kontakt",
           link: "/contact",
         },
         {
-          title: "Review Us",
+          title: "Anmeldelse",
           link: "/review",
         },
       ],
     },
     {
-      title: "Contact Us",
+      title: "Kontakt Oss",
       links: [
         {
-          title: "Address",
+          title: "Adresse",
           value: "Satkhira, Kaliganji, BD",
         },
         {
-          title: "Email",
+          title: "Epost",
           value: "aburaihan.it009@gmail.com",
         },
         {
-          title: "Phone",
+          title: "Telefon",
           value: "+88 01407152619",
         },
       ],
@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
             alt="logo"
             className="max-h-36 max-w-36 object-cover inline"
           />
-          <p className="text-gray-500 dark:text-gray-400 text-center">
+          <p className="text-gray-500 dark:text-gray-400 text-start">
             En ledende leverandør av cybersikkerhetstjenester og -løsninger for
             distribusjon og teknologipartnere rundt om i USA.
           </p>

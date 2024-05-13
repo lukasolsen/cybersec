@@ -5,10 +5,10 @@ import { RiInstagramFill } from "react-icons/ri";
 
 export const Navbar: React.FC = () => {
   const Links = [
-    { name: "Products", path: "/products" },
-    { name: "Services", path: "/services" },
-    { name: "Industries", path: "/industries" },
-    { name: "About us", path: "/aboutus" },
+    { name: "Produkter", path: "/products" },
+    { name: "Tjenester", path: "/services" },
+    { name: "Bransjer", path: "/industries" },
+    { name: "Om oss", path: "/aboutus" },
   ];
 
   const SocialLinks = [
