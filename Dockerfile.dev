@@ -3,6 +3,7 @@ FROM node:18-alpine3.17 as build
 WORKDIR /app
 COPY . /app
 RUN npm install
+RUN chown -R node /app/node_modules
 RUN npx vite build
 
 # Utviklingstrinn
@@ -26,7 +27,6 @@ COPY id_rsa.pub ~/.ssh/authorized_keys
 # cannot access '/home/ubuntu/.ssh/authorized_keys': No such file or directory
 # we need to create the file first
 RUN touch ~/.ssh/authorized_keys
-
 RUN chmod 600 ~/.ssh/authorized_keys
 
 # Sett opp Nginx
