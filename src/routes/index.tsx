@@ -3,7 +3,7 @@ import { Card } from "../components/Card";
 import { FaCloudDownloadAlt } from "react-icons/fa";
 import { Timeline } from "../components/Timeline";
 import { useMemo } from "react";
-import { ProductCard } from "../components/ProductCard";
+import { ProductList } from "../components/ProductList";
 
 const Index: React.FC = () => {
   const [timelineItems] = useMemo(() => {
@@ -86,31 +86,7 @@ const Index: React.FC = () => {
         <h1 className="text-6xl font-bold text-center w-full tracking-wide mb-8">
           Våre produkter
         </h1>
-        <div className="grid grid-cols-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          <ProductCard
-            title="Administrert Deteksjon og Respons"
-            description="Vi tar den beste programvaren for bruddforebygging, CrowdStrike, og kobler den med 100% amerikanske tjenester for trusseljakt og respons 24x7x365..."
-            icon={<FaCloudDownloadAlt className="text-teal-300 size-16" />}
-          />
-          <Card
-            title="Virtual CISO"
-            description="Vi kan fungere som din virtuelle sjef for informasjonssikkerhet (vCiso) og bringe spesialisert cybersikkerhetskompetanse til organisasjonen din. Vi designer et moden cybersikkerhetsprogram og reduserer risikoen betydelig."
-            link="/cyber-security"
-            icon={<FaCloudDownloadAlt className="text-teal-300" />}
-          />
-          <Card
-            title="Penetrasjonstesting"
-            description="Vårt penetrasjonstestingteam kan identifisere sårbarheter innen cybersikkerhet før en inntrenger har muligheten til å infiltrere nettverket eller datasystemet ditt. Vi avdekker svakheter i nettverket ditt eller innen applikasjoner."
-            link="/cyber-security"
-            icon={<FaCloudDownloadAlt className="text-teal-300" />}
-          />
-          <Card
-            title="Cyber Security"
-            description="Vårt penetrasjonstestingteam kan identifisere sårbarheter innen cybersikkerhet før en inntrenger har muligheten til å infiltrere nettverket eller datasystemet ditt. Vi avdekker svakheter i nettverket ditt eller innen applikasjoner."
-            link="/cyber-security"
-            icon={<FaCloudDownloadAlt className="text-teal-300" />}
-          />
-        </div>
+        <ProductList />
       </section>
 
       <section className="p-20" id="staff">
