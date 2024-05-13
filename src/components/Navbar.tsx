@@ -46,7 +46,7 @@ export const Navbar: React.FC = () => {
         </Link>
       </div>
 
-      <div className="flex flex-row items-center gap-4">
+      <div className="flex flex-row items-center gap-12">
         {Links.map((link) => (
           <Link
             to={link.path}
