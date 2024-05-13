@@ -35,7 +35,7 @@ export const Navbar: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-row items-center justify-between w-full p-4 px-16">
+    <div className="flex flex-row items-center justify-between w-full p-4 px-28">
       <div>
         <Link className="text-2xl font-bold w-full" to="/">
           <img
