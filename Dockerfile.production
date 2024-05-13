@@ -1,0 +1,36 @@
+# Bygg trinn
+FROM node:18-alpine3.17 as build
+WORKDIR /app
+COPY . /app
+RUN npm install
+RUN npx vite build
+
+# Utviklingstrinn
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install -y openssh-server sudo nginx
+RUN echo "hamar-utvikling ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
+
+# Opprett en ny bruker og sett opp SSH
+RUN useradd -rm -d /home/ubuntu -s /bin/bash -g root -G sudo -u 1001 hamar-utvikling
+USER hamar-utvikling
+WORKDIR /home/ubuntu
+
+# Give the newlymade user full access to the SSH folder
+RUN sudo chown -R hamar-utvikling /home/ubuntu
+
+RUN mkdir ~/.ssh
+RUN chmod 700 ~/.ssh
+COPY id_rsa.pub ~/.ssh/authorized_keys
+
+# cannot access '/home/ubuntu/.ssh/authorized_keys': No such file or directory
+# we need to create the file first
+RUN touch ~/.ssh/authorized_keys
+
+RUN chmod 600 ~/.ssh/authorized_keys
+
+# Sett opp Nginx
+USER root
+COPY --from=build /app/dist /var/www/html/
+EXPOSE 80
+CMD ["nginx","-g","daemon off;"]
