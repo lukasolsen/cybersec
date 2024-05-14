@@ -73,7 +73,7 @@ export const Footer: React.FC = () => {
 
   return (
     <div className="p-4 px-28 w-full">
-      <div className="grid grid-cols-5 w-full gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-5 w-full gap-8">
         <div className="flex flex-col gap-2 items-start justify-center">
           <img
             src="/logo.png"
