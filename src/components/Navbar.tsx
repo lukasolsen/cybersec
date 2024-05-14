@@ -1,9 +1,11 @@
 import { Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import { FaFacebookF, FaTwitter } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaBars, FaLinkedin } from "react-icons/fa6";
 import { RiInstagramFill } from "react-icons/ri";
 
 export const Navbar: React.FC = () => {
+  const [displayNavbar, setDisplayNavbar] = useState(false);
   const Links = [
     { name: "Produkter", path: "/products" },
     { name: "Tjenester", path: "/services" },
@@ -34,8 +36,20 @@ export const Navbar: React.FC = () => {
     },
   ];
 
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setDisplayNavbar(false);
+    });
+
+    return () => {
+      window.removeEventListener("resize", () => {
+        setDisplayNavbar(false);
+      });
+    };
+  }, []);
+
   return (
-    <div className="flex flex-row items-center justify-between w-full p-4 px-28">
+    <nav className="flex flex-wrap flex-row items-center justify-between w-full p-4 px-28">
       <div>
         <Link className="text-2xl font-bold w-full" to="/">
           <img
@@ -46,7 +60,20 @@ export const Navbar: React.FC = () => {
         </Link>
       </div>
 
-      <div className="flex flex-row items-center gap-12">
+      <button
+        className="cursor-pointer lg:hidden block"
+        onClick={() => setDisplayNavbar(!displayNavbar)}
+      >
+        <FaBars size={"1.5rem"} />
+      </button>
+
+      <div
+        className={
+          displayNavbar
+            ? "block lg:hidden flex flex-col gap-4"
+            : `hidden lg:flex flex-row items-center gap-12`
+        }
+      >
         {Links.map((link) => (
           <Link
             to={link.path}
@@ -60,7 +87,7 @@ export const Navbar: React.FC = () => {
         ))}
       </div>
 
-      <div className="flex flex-row items-center gap-4">
+      <div className="hidden lg:flex flex-row items-center gap-4">
         {SocialLinks.map((link) => (
           <a href={link.path}>
             <button className="border border-teal-500 rounded-full h-8 w-8 flex items-center justify-center">
@@ -69,6 +96,6 @@ export const Navbar: React.FC = () => {
           </a>
         ))}
       </div>
-    </div>
+    </nav>
   );
 };
