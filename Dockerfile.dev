@@ -29,5 +29,6 @@ RUN chmod 600 ~/.ssh/authorized_keys
 # Sett opp Nginx
 USER root
 COPY --from=build /app/dist /var/www/html/
+RUN echo "server { listen 80; location / { root /var/www/html; try_files \$uri /index.html; } }" > /etc/nginx/conf.d/default.conf
 EXPOSE 80
 CMD ["nginx","-g","daemon off;"]
