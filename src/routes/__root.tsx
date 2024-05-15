@@ -86,7 +86,16 @@ export const RootPage: React.FC = () => {
   });
 
   return (
-    <div className="min-h-screen min-w-full dark:bg-primary dark:text-white">
+    <div
+      className="min-h-screen min-w-full dark:bg-primary dark:text-white"
+      style={{
+        backgroundImage:
+          "url(https://img.freepik.com/free-vector/abstract-shapes-with-gray-tones_1055-1950.jpg?t=st=1715762680~exp=1715766280~hmac=3a4896ece535e2afc7984384ee153e5ddfe937a78de72fddfbc63affc8f09033&w=826)",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundBlendMode: "overlay",
+      }}
+    >
       <Navbar />
       <div className="container mx-auto">
         <Outlet />

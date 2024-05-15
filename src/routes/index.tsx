@@ -35,7 +35,7 @@ const Index: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className="relative">
       <section className="p-20" id="home">
         <div className="flex flex-col justify-center items-center gap-8">
           <h1 className="text-8xl font-bold text-center w-full tracking-wide">

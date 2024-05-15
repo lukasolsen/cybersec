@@ -48,7 +48,7 @@ export const Footer: React.FC = () => {
       ],
     },
     {
-      title: "Follow Us",
+      title: "Følg Oss",
       links: [
         {
           title: "Facebook",
