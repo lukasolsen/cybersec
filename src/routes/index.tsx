@@ -5,6 +5,7 @@ import { Timeline } from "../components/Timeline";
 import { useMemo } from "react";
 import { ProductList } from "../components/ProductList";
 import Maps from "../components/Maps/Maps";
+import { Contact } from "../components/Admin/Contact";
 
 const Index: React.FC = () => {
   const [timelineItems] = useMemo(() => {
@@ -104,6 +105,15 @@ const Index: React.FC = () => {
         </h1>
         <div className="w-full h-[45rem]">
           <Maps />
+        </div>
+      </section>
+
+      <section className="p-20" id="maps">
+        <h1 className="text-6xl font-bold text-center w-full tracking-wide mb-4">
+          Kontakt
+        </h1>
+        <div className="w-full h-[45rem]">
+          <Contact />
         </div>
       </section>
     </div>
